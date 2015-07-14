@@ -1,0 +1,17 @@
+{
+    "contents" : "# Site settings\nname: Scalable Machine Learning with SparkR\ntitle: Scalable Machine Learning with SparkR\nemail: daniel.emaasit@gmail.com\ndescription: > # this means to ignore newlines until \"baseurl:\"\n  R is a popular statistical programming language with a number of extensions that support data processing and machine learning tasks. However, interactive data analysis in R is usually limited as the runtime is single-threaded and can only process data sets that fit in a single machine's memory.  SparkR, an R package initially developed at the AMPLab, provides an R frontend to Apache Spark and using Spark's distributed computation engine allows us to run large scale data analysis from the R shell.\nbaseurl: \"/scalable-machine-learning-with-sparkr\" # the subpath of your site, e.g. /blog/\nurl: \"http://danielemaasit.com\" # the base hostname & protocol for your site\ntwitter_username: emaasit\ngithub_username:  emaasit\n\n# Build settings\nmarkdown: redcarpet\nhighlighter: pygments\n\nexclude: [\"CONTRIBUTING.md\", \"README.md\", \"book\", \"extras\"]\n\n\n",
+    "created" : 1436866678559.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3974167605",
+    "id" : "FD5C7A1",
+    "lastKnownWriteTime" : 1436866835,
+    "path" : "C:/Users/Emaasit/Dropbox/MyBooks/scalable-machine-learning/_config.yml",
+    "project_path" : "_config.yml",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "yaml"
+}

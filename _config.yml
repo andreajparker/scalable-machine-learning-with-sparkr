@@ -1,0 +1,18 @@
+# Site settings
+name: Scalable Machine Learning with SparkR
+title: Scalable Machine Learning with SparkR
+email: daniel.emaasit@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  R is a popular statistical programming language with a number of extensions that support data processing and machine learning tasks. However, interactive data analysis in R is usually limited as the runtime is single-threaded and can only process data sets that fit in a single machine's memory.  SparkR, an R package initially developed at the AMPLab, provides an R frontend to Apache Spark and using Spark's distributed computation engine allows us to run large scale data analysis from the R shell.
+baseurl: "/scalable-machine-learning-with-sparkr" # the subpath of your site, e.g. /blog/
+url: "http://danielemaasit.com" # the base hostname & protocol for your site
+twitter_username: emaasit
+github_username:  emaasit
+
+# Build settings
+markdown: redcarpet
+highlighter: pygments
+
+exclude: ["CONTRIBUTING.md", "README.md", "book", "extras"]
+
+
