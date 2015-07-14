@@ -1,3 +1,3 @@
-# getting-started-with-sparkr
-Getting Started with SparkR for Big Data Analysis
-This is a book on SparkR
+# scalable-machine-learning-with-sparkr
+Scalable Machine Learning with SparkR
+This is a book on machine learning using Apache SparkR
