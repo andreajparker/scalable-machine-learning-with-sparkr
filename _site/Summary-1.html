@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Introduction &middot; Scalable Machine Learning with SparkR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="www/bootstrap.min.css" rel="stylesheet">
+    <link href="www/highlight.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700'
+      rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Table of contents <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right" role="menu">
+              <li><a href="Introduction.html">Introduction</a></li>
+
+<li class="dropdown-header">The R Project</li>
+<li><a href="What-is-r.html">What is R?</a></li>
+<li><a href="Quick-start.html">Quick Start</a></li>
+<li><a href="Data-Structures.html">Data Structures</a></li>
+<li><a href="A-quick-example.html">A Quick Example</a></li>
+<li><a href="Visualization-in-r.html">Visualization in R</a></li>
+<li><a href="Additional-resources.html">Additional Resources</a></li>
+<li><a href="summary-1.html">Summary</a></li>
+
+
+<li class="dropdown-header">Apache Spark</li>
+<li><a href="Functional-programming.html">What is Apache Spark</a></li>
+<li><a href="Downloading-and-installing-spark.html">Downloading and Installing Spark</a></li>
+<li><a href="Resilient-distributed-datasets.html">Resilient Distributed Datasets</a></li>
+<li><a href="Loading-and-saving-data.html">Loading and Saving Data</a></li>
+<li><a href="Sparksql.html">SparkSQL</a></li>
+<li><a href="Spark-streaming.html">Spark Streaming</a></li>
+<li><a href="Machine-learning-with-mllib.html">Machine Learning with MLib</a></li>
+<li><a href="summary-2.html">Summary</a></li>
+
+
+<li class="dropdown-header">SparkR</li>
+<li><a href="Overview.html">Overview</a></li>
+<li><a href="Spark-r-dataframes.html">SparkR DataFrames</a></li>
+<li><a href="Creating-dataframes.html">Creating DataFrames</a></li>
+<li><a href="Dataframe-operations.html">DataFrame Operations</a></li>
+<li><a href="sql-queries.html">SQL Queries</a></li>
+<li><a href="visualization.html">Visualization</a></li>
+<li><a href="statistical-modeling.html">Statistical Modeling</a></li>
+<li><a href="machine-learning.html">Machine Learning</a></li>
+<li><a href="summary-3.html">Summary</a></li>
+
+
+
+
+            </ul>
+          </li>
+        </ul>
+
+        <h3 class="muted"><a href="/scalable-machine-learning-with-sparkr">Scalable Machine Learning with SparkR</a> <small>by Daniel Emaasit</small></h3>
+        <hr>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-3" id="nav">
+
+
+        <div class="well">
+          This is an online book developed in the open. The material has not been published yet. You can contribute by clicking <a href="/contribute.html">here</a>.
+        </div>
+
+        <div class="well">
+          <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/emaasit">
+              <span class="icon  icon--github">
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+                </svg>
+              </span>
+
+              <span class="username">emaasit</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/emaasit">
+              <span class="icon  icon--twitter">
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path>
+                </svg>
+              </span>
+
+              <span class="username">emaasit</span>
+            </a>
+          </li>
+
+          <li><a href="mailto:daniel.emaasit@gmail.com">daniel.emaasit@gmail.com</a></li>
+          
+        </ul>
+        </div>
+
+
+        <h4>Contents</h4>
+          <ul class="list-unstyled" id="toc"></ul>
+
+          <hr>
+          <p><a href="/contribute.html">How to contribute</a></p>
+
+          <p><a class="btn btn-primary" href="https://github.com/emaasit/getting-started-with-sparkr/edit/master/Summary-1.md">Edit this page</a></p>
+        </div>
+
+        <div id="content" class="col-xs-12 col-sm-8 pull-right">
+          <h1>Introduction</h1>
+
+<p>With more than 10 years experience programming in R, I&#39;ve had the luxury of being able to spend a lot of time trying to figure out and understand how the language works. This book is my attempt to pass on what I&#39;ve learned so that you can quickly become an effective R programmer. Reading it will help you avoid the mistakes I&#39;ve made and dead ends I&#39;ve gone down, and will teach you useful tools, techniques, and idioms that can help you to attack many types of problems. In the process, I hope to show that, despite its frustrating quirks, R is, at its heart, an elegant and beautiful language, well tailored for data analysis and statistics.</p>
+
+<p>If you are new to R, you might wonder what makes learning such a quirky language worthwhile. To me, some of the best features are:</p>
+
+<ul>
+<li><p>It&#39;s free, open source, and available on every major platform. As a result, if 
+you do your analysis in R, anyone can easily replicate it.</p></li>
+<li><p>A massive set of packages for statistical modelling, machine learning,
+visualisation, and importing and manipulating data. Whatever model or
+graphic you&#39;re trying to do, chances are that someone has already tried
+to do it. At a minimum, you can learn from their efforts.</p></li>
+<li><p>Cutting edge tools. Researchers in statistics and machine learning will often
+publish an R package to accompany their articles. This means immediate
+access to the very latest statistical techniques and implementations.</p></li>
+<li><p>Deep-seated language support for data analysis. This includes features
+likes missing values, data frames, and subsetting.</p></li>
+<li><p>A fantastic community. It is easy to get help from experts on the
+<a href="https://stat.ethz.ch/mailman/listinfo/r-help">R-help mailing list</a>,
+<a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>,
+or subject-specific mailing lists like
+<a href="https://stat.ethz.ch/mailman/listinfo/r-sig-mixed-models">R-SIG-mixed-models</a>
+or <a href="https://groups.google.com/forum/#!forum/ggplot2">ggplot2</a>. You
+can also connect with other R learners via
+<a href="https://twitter.com/search?q=%23rstats">twitter</a>,
+<a href="http://www.linkedin.com/groups/R-Project-Statistical-Computing-77616">linkedin</a>,
+and through many local
+<a href="http://blog.revolutionanalytics.com/local-r-groups.html">user groups</a>.</p></li>
+<li><p>Powerful tools for communicating your results. R packages make it easy to
+produce html or pdf <a href="http://yihui.name/knitr/">reports</a>, or create
+<a href="http://www.rstudio.com/shiny/">interactive websites</a>.</p></li>
+<li><p>A strong foundation in functional programming. The ideas of functional
+programming are well suited to solving many of the challenges of data
+analysis. R provides a powerful and flexible toolkit which allows
+you to write concise yet descriptive code.</p></li>
+<li><p>An <a href="http://www.rstudio.com/ide/">IDE</a> tailored to the needs of interactive
+data analysis and statistical programming.</p></li>
+<li><p>Powerful metaprogramming facilities. R is not just a programming language, it
+is also an environment for interactive data analysis. Its metaprogramming
+capabilities allow you to write magically succinct and concise functions and
+provide an excellent environment for designing domain-specific languages.</p></li>
+<li><p>Designed to connect to high-performance programming languages like C,
+Fortran, and C++.</p></li>
+</ul>
+
+<p>Of course, R is not perfect. R&#39;s biggest challenge is that most R users are not programmers. This means that:</p>
+
+<ul>
+<li><p>Much of the R code you&#39;ll see in the wild is written in haste to solve
+a pressing problem. As a result, code is not very elegant, fast, or easy to
+understand. Most users do not revise their code to address these shortcomings.</p></li>
+<li><p>Compared to other programming languages, the R community tends to be more
+focussed on results instead of processes. Knowledge of software engineering
+best practices is patchy: for instance, not enough R programmers use source
+code control or automated testing.</p></li>
+<li><p>Metaprogramming is a double-edged sword. Too many R functions use
+tricks to reduce the amount of typing at the cost of making code that
+is hard to understand and that can fail in unexpected ways.</p></li>
+<li><p>Inconsistency is rife across contributed packages, even within base R.
+You are confronted with over 20 years of evolution every time you use R. 
+Learning R can be tough because there are many special cases to remember.</p></li>
+<li><p>R is not a particularly fast programming language, and poorly written R code
+can be terribly slow. R is also a profligate user of memory. </p></li>
+</ul>
+
+<p>Personally, I think these challenges create a great opportunity for experienced programmers to have a profound positive impact on R and the R community. R users do care about writing high quality code, particularly for reproducible research, but they don&#39;t yet have the skills to do so. I hope this book will not only help more R users to become R programmers but also encourage programmers from other languages to contribute to R.</p>
+
+<h2>Who should read this book {#who-should-read}</h2>
+
+<p>This book is aimed at two complementary audiences:</p>
+
+<ul>
+<li><p>Intermediate R programmers who want to dive deeper into R and learn new
+strategies for solving diverse problems.</p></li>
+<li><p>Programmers from other languages who are learning R and want to understand
+why R works the way it does.</p></li>
+</ul>
+
+<p>To get the most out of this book, you&#39;ll need to have written a decent amount of code in R or another programming language. You might not know all the details, but you should be familiar with how functions work in R and although you may currently struggle to use them effectively, you should be familiar with the apply family (like <code>apply()</code> and <code>lapply()</code>).</p>
+
+<h2>What you will get out of this book {#what-you-will-get}</h2>
+
+<p>This book describes the skills I think an advanced R programmer should have: the ability to produce quality code that can be used in a wide variety of circumstances.</p>
+
+<p>After reading this book, you will:</p>
+
+<ul>
+<li><p>Be familiar with the fundamentals of R. You will understand complex data types
+and the best ways to perform operations on them. You will have a deep
+understanding of how functions work, and be able to recognise and use the four
+object systems in R.</p></li>
+<li><p>Understand what functional programming means, and why it is a useful tool for
+data analysis. You&#39;ll be able to quickly learn how to use existing tools, and
+have the knowledge to create your own functional tools when needed.</p></li>
+<li><p>Appreciate the double-edged sword of metaprogramming. You&#39;ll be able to
+create functions that use non-standard evaluation in a principled way,
+saving typing and creating elegant code to express important operations.
+You&#39;ll also understand the dangers of metaprogramming and why you should be
+careful about its use.</p></li>
+<li><p>Have a good intuition for which operations in R are slow or use a lot of
+memory. You&#39;ll know how to use profiling to pinpoint performance
+bottlenecks, and you&#39;ll know enough C++ to convert slow R functions to
+fast C++ equivalents.</p></li>
+<li><p>Be comfortable reading and understanding the majority of R code.
+You&#39;ll recognise common idioms (even if you wouldn&#39;t use them yourself)
+and be able to critique others&#39; code.</p></li>
+</ul>
+
+<h2>Meta-techniques {#meta-techniques}</h2>
+
+<p>There are two meta-techniques that are tremendously helpful for improving your skills as an R programmer: reading source code and adopting a scientific mindset.</p>
+
+<p>Reading source code is important because it will help you write better code. A great place to start developing this skill is to look at the source code of the functions and packages you use most often. You&#39;ll find things that are worth emulating in your own code and you&#39;ll develop a sense of taste for what makes good R code. You will also see things that you don&#39;t like, either because its virtues are not obvious or it offends your sensibilities. Such code is nonetheless valuable, because it helps make concrete your opinions on good and bad code.</p>
+
+<p>A scientific mindset is extremely helpful when learning R. If you don&#39;t understand how something works, develop a hypothesis, design some experiments, run them, and record the results. This exercise is extremely useful since if you can&#39;t figure something out and need to get help, you can easily show others what you tried. Also, when you learn the right answer, you&#39;ll be mentally prepared to update your world view. When I clearly describe a problem to someone else (the art of creating a <a href="http://stackoverflow.com/questions/5963269">reproducible example</a>), I often figure out the solution myself.</p>
+
+<h2>Recommended reading {#recommended-reading}</h2>
+
+<p>R is still a relatively young language, and the resources to help you understand it are still maturing. In my personal journey to understand R, I&#39;ve found it particularly helpful to use resources from other programming languages. R has aspects of both functional and object-oriented (OO) programming languages. Learning how these concepts are expressed in R will help you leverage your existing knowledge of other programming languages, and will help you identify areas where you can improve.</p>
+
+<p>To understand why R&#39;s object systems work the way they do, I found <a href="http://mitpress.mit.edu/sicp/full-text/book/book.html"><em>The Structure and Interpretation of Computer Programs</em></a> (SICP) by Harold Abelson and Gerald Jay Sussman, particularly helpful. It&#39;s a concise but deep book. After reading it, I felt for the first time that I could actually design my own object-oriented system. The book was my first introduction to the generic function style of OO common in R. It helped me understand its strengths and weaknesses. SICP also talks a lot about functional programming, and how to create simple functions which become powerful when combined.</p>
+
+<p>To understand the trade-offs that R has made compared to other programming languages, I found <a href="http://amzn.com/0262220695?tag=devtools-20"><em>Concepts, Techniques and Models of Computer Programming</em></a> by Peter van Roy and Sef Haridi extremely helpful. It helped me understand that R&#39;s copy-on-modify semantics make it substantially easier to reason about code, and that while its current implementation is not particularly efficient, it is a solvable problem.</p>
+
+<p>If you want to learn to be a better programmer, there&#39;s no place better to turn than <a href="http://amzn.com/020161622X?tag=devtools-20"><em>The Pragmatic Programmer</em></a> by Andrew Hunt and David Thomas. This book is language agnostic, and provides great advice for how to be a better programmer.</p>
+
+<h2>Getting help {#getting-help}</h2>
+
+<p>Currently, there are two main venues to get help when you&#39;re stuck and can&#39;t figure out what&#39;s causing the problem: <a href="http://stackoverflow.com">stackoverflow</a> and the R-help mailing list. You can get fantastic help in both venues, but they do have their own cultures and expectations. It&#39;s usually a good idea to spend a little time lurking, learning about community expectations, before you put up your first post. \index{help}</p>
+
+<p>Some good general advice:</p>
+
+<ul>
+<li><p>Make sure you have the latest version of R and of the package (or packages)
+you are having problems with. It may be that your problem is the result of
+a recently fixed bug.</p></li>
+<li><p>Spend some time creating a
+<a href="http://stackoverflow.com/questions/5963269">reproducible example</a>. This
+is often a useful process in its own right, because in the course of making
+the problem reproducible you often figure out what&#39;s causing the problem.</p></li>
+<li><p>Look for related problems before posting. If someone has already asked
+your question and it has been answered, it&#39;s much faster for everyone if you
+use the existing answer.</p></li>
+</ul>
+
+<h2>Acknowledgments {#intro-ack}</h2>
+
+<p>I would like to thank the tireless contributors to R-help and, more recently, <a href="http://stackoverflow.com/questions/tagged/r">stackoverflow</a>. There are too many to name individually, but I&#39;d particularly like to thank Luke Tierney, John Chambers, Dirk Eddelbuettel, JJ Allaire and Brian Ripley for generously giving their time and correcting my countless misunderstandings.</p>
+
+<p>This book was <a href="https://github.com/hadley/adv-r/">written in the open</a>, and chapters were advertised on <a href="https://twitter.com/hadleywickham">twitter</a> when complete. It is truly a community effort: many people read drafts, fixed typos, suggested improvements, and contributed content. Without those contributors, the book wouldn&#39;t be nearly as good as it is, and I&#39;m deeply grateful for their help. Special thanks go to Peter Li, who read the book from cover-to-cover and provided many fixes. Other outstanding contributors were Aaron Schumacher, @crtahlin, Lingbing Feng, @juancentro, and @johnbaums. \index{contributors}</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">## Warning in file(file, &quot;rt&quot;): cannot open file &#39;contribs.txt&#39;: No such file
+## or directory
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">## Error in file(file, &quot;rt&quot;): cannot open the connection
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">## Error in names(contribs) &lt;- c(&quot;n&quot;, &quot;name&quot;): object &#39;contribs&#39; not found
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">## Error in eval(expr, envir, enclos): object &#39;contribs&#39; not found
+</code></pre></div><div class="highlight"><pre><code class="language-text" data-lang="text">## Error in grepl(&quot; &quot;, contribs$name): object &#39;contribs&#39; not found
+</code></pre></div>
+<p>Thanks go to all contributers in alphabetical order: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">## Error in paste0(contribs$uname, collapse = &quot;, &quot;): object &#39;contribs&#39; not found
+</code></pre></div>
+<p>.</p>
+
+<h2>Conventions {#conventions}</h2>
+
+<p>Throughout this book I use <code>f()</code> to refer to functions, <code>g</code> to refer to variables and function parameters, and <code>h/</code> to paths. </p>
+
+<p>Larger code blocks intermingle input and output. Output is commented so that if you have an electronic version of the book, e.g., <a href="http://adv-r.had.co.nz">http://adv-r.had.co.nz</a>, you can easily copy and paste examples into R. Output comments look like <code>#&gt;</code> to distinguish them from regular comments. \index{website}</p>
+
+<h2>Colophon {#colophon}</h2>
+
+<p>This book was written in <a href="http://rmarkdown.rstudio.com/">Rmarkdown</a> inside <a href="http://www.rstudio.com/ide/">Rstudio</a>. <a href="http://yihui.name/knitr/">knitr</a> and <a href="http://johnmacfarlane.net/pandoc/">pandoc</a> converted the raw Rmarkdown to html and pdf. The <a href="http://adv-r.had.co.nz">website</a> was made with <a href="http://jekyllrb.com/">jekyll</a>, styled with <a href="http://getbootstrap.com/">bootstrap</a>, and automatically published to Amazon&#39;s <a href="http://aws.amazon.com/s3/">S3</a> by <a href="https://travis-ci.org/">travis-ci</a>. The complete source is available from <a href="https://github.com/hadley/adv-r">github</a>.</p>
+
+<p>Code is set in <a href="http://levien.com/type/myfonts/inconsolata.html">inconsolata</a>.</p>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <hr>
+        <p>&copy; Daniel Emaasit. Powered by <a href="http://jekyllrb.com/">jekyll</a>,
+          <a href="http://yihui.name/knitr/">knitr</a>, and
+          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>. Source
+          available on <a href="https://github.com/emaasit/getting-started-with-sparkr/">github</a>.
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="www/bootstrap.min.js"></script>
+  <script src="www/toc.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67989-17', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  </body>
+</html>

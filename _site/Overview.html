@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Overview &middot; Scalable Machine Learning with SparkR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="www/bootstrap.min.css" rel="stylesheet">
+    <link href="www/highlight.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700'
+      rel='stylesheet' type='text/css'>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Table of contents <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu pull-right" role="menu">
+              <li><a href="Introduction.html">Introduction</a></li>
+
+<li class="dropdown-header">The R Project</li>
+<li><a href="What-is-r.html">What is R?</a></li>
+<li><a href="Quick-start.html">Quick Start</a></li>
+<li><a href="Data-Structures.html">Data Structures</a></li>
+<li><a href="A-quick-example.html">A Quick Example</a></li>
+<li><a href="Visualization-in-r.html">Visualization in R</a></li>
+<li><a href="Additional-resources.html">Additional Resources</a></li>
+<li><a href="summary-1.html">Summary</a></li>
+
+
+<li class="dropdown-header">Apache Spark</li>
+<li><a href="Functional-programming.html">What is Apache Spark</a></li>
+<li><a href="Downloading-and-installing-spark.html">Downloading and Installing Spark</a></li>
+<li><a href="Resilient-distributed-datasets.html">Resilient Distributed Datasets</a></li>
+<li><a href="Loading-and-saving-data.html">Loading and Saving Data</a></li>
+<li><a href="Sparksql.html">SparkSQL</a></li>
+<li><a href="Spark-streaming.html">Spark Streaming</a></li>
+<li><a href="Machine-learning-with-mllib.html">Machine Learning with MLib</a></li>
+<li><a href="summary-2.html">Summary</a></li>
+
+
+<li class="dropdown-header">SparkR</li>
+<li><a href="Overview.html">Overview</a></li>
+<li><a href="Spark-r-dataframes.html">SparkR DataFrames</a></li>
+<li><a href="Creating-dataframes.html">Creating DataFrames</a></li>
+<li><a href="Dataframe-operations.html">DataFrame Operations</a></li>
+<li><a href="sql-queries.html">SQL Queries</a></li>
+<li><a href="visualization.html">Visualization</a></li>
+<li><a href="statistical-modeling.html">Statistical Modeling</a></li>
+<li><a href="machine-learning.html">Machine Learning</a></li>
+<li><a href="summary-3.html">Summary</a></li>
+
+
+
+
+            </ul>
+          </li>
+        </ul>
+
+        <h3 class="muted"><a href="/scalable-machine-learning-with-sparkr">Scalable Machine Learning with SparkR</a> <small>by Daniel Emaasit</small></h3>
+        <hr>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-3" id="nav">
+
+
+        <div class="well">
+          This is an online book developed in the open. The material has not been published yet. You can contribute by clicking <a href="/contribute.html">here</a>.
+        </div>
+
+        <div class="well">
+          <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/emaasit">
+              <span class="icon  icon--github">
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
+                </svg>
+              </span>
+
+              <span class="username">emaasit</span>
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/emaasit">
+              <span class="icon  icon--twitter">
+                <svg width="16" height="16" viewBox="0 0 16 16">
+                  <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
+                  c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"></path>
+                </svg>
+              </span>
+
+              <span class="username">emaasit</span>
+            </a>
+          </li>
+
+          <li><a href="mailto:daniel.emaasit@gmail.com">daniel.emaasit@gmail.com</a></li>
+          
+        </ul>
+        </div>
+
+
+        <h4>Contents</h4>
+          <ul class="list-unstyled" id="toc"></ul>
+
+          <hr>
+          <p><a href="/contribute.html">How to contribute</a></p>
+
+          <p><a class="btn btn-primary" href="https://github.com/emaasit/getting-started-with-sparkr/edit/master/Overview.md">Edit this page</a></p>
+        </div>
+
+        <div id="content" class="col-xs-12 col-sm-8 pull-right">
+          <h1>Overview</h1>
+
+<p>SparkR is an R package that provides a light-weight frontend to use Apache Spark from R. In Spark 1.4.0, SparkR provides a distributed data frame implementation that supports operations like selection, filtering, aggregation etc. (similar to R data frames, dplyr) but on large datasets.  </p>
+
+<p>I am excited to announce that the upcoming Apache Spark 1.4 release will include SparkR, an R package that allows data scientists to analyze large datasets and interactively run jobs on them from the R shell.R is a popular statistical programming language with a number of extensions that support data processing and machine learning tasks. However, interactive data analysis in R is usually limited as the runtime is single-threaded and can only process data sets that fit in a single machine’s memory.  SparkR, an R package initially developed at the AMPLab, provides an R frontend to Apache Spark and using Spark’s distributed computation engine allows us to run large scale data analysis from the R shell.</p>
+
+<h2>Project History {#project-history}</h2>
+
+<p>The SparkR project was initially started in the AMPLab as an effort to explore different techniques to integrate the usability of R with the scalability of Spark. Based on these efforts, an initial developer preview of SparkR was first open sourced in January 2014. The project was then developed in the AMPLab for the next year and we made many performance and usability improvements through open source contributions to SparkR. SparkR was recently merged into the Apache Spark project and will be released as an alpha component of Apache Spark in the 1.4 release.  </p>
+
+<h2>SparkR DataFrames {#sparkr-dataframes}</h2>
+
+<p>The central component in the SparkR 1.4 release is the SparkR DataFrame, a distributed data frame implemented on top of Spark.  Data frames are a fundamental data structure used for data processing in R and the concept of data frames has been extended to other languages with libraries like Pandas etc. Projects like dplyr have further simplified expressing complex data manipulation tasks on data frames. SparkR DataFrames present an API similar to dplyr and local R data frames but can scale to large data sets using support for distributed computation in Spark.</p>
+
+<h2>Benefits of Spark integration {#benefits-of-spark-integration}</h2>
+
+<p>In addition to having an easy to use API, SparkR inherits many benefits from being tightly integrated with Spark. These include:  </p>
+
+<ul>
+<li><p>Data Sources API: By tying into Spark SQL’s <a href="https://databricks.com/blog/2015/01/09/spark-sql-data-sources-api-unified-data-access-for-the-spark-platform.html"><em>data sources API SparkR</em></a> can read in data from a variety of sources include Hive tables, JSON files, Parquet files etc.  </p></li>
+<li><p>Data Frame Optimizations: SparkR DataFrames also inherit all of the optimizations made to the computation engine in terms of <a href="https://databricks.com/blog/2015/04/28/project-tungsten-bringing-spark-closer-to-bare-metal.html"><em>code generation, memory management</em></a>. For example, the following chart compares the runtime performance of running group-by aggregation on 10 million integer pairs on a single machine in R, Python and Scala (using the same dataset as <a href="https://goo.gl/iMLXnh"><em>https://goo.gl/iMLXnh</em></a>). From the graph we can see that using the optimizations in the computation engine makes SparkR performance similar to that of Scala / Python.  </p></li>
+<li><p>Scalability to many cores and machines: Operations executed on SparkR DataFrames get automatically distributed across all the cores and machines available on the Spark cluster. As a result SparkR DataFrames <a href="http://databricks.com/blog/2014/11/05/spark-officially-sets-a-new-record-in-large-scale-sorting.html"><em>can be used on terabytes of data</em></a> and run on clusters with thousands of machines.</p></li>
+</ul>
+
+<h2>Recommended reading {#recommended-reading}</h2>
+
+<p>SparkR is still a relatively young language, and the resources to help you understand it are still maturing. In my personal journey to understand R, I&#39;ve found it particularly helpful to use resources from other programming languages. R has aspects of both functional and object-oriented (OO) programming languages. Learning how these concepts are expressed in R will help you leverage your existing knowledge of other programming languages, and will help you identify areas where you can improve.</p>
+
+<p>To understand why R&#39;s object systems work the way they do, I found <a href="http://mitpress.mit.edu/sicp/full-text/book/book.html"><em>The Structure and Interpretation of Computer Programs</em></a> (SICP) by Harold Abelson and Gerald Jay Sussman, particularly helpful. It&#39;s a concise but deep book. After reading it, I felt for the first time that I could actually design my own object-oriented system. The book was my first introduction to the generic function style of OO common in R. It helped me understand its strengths and weaknesses. SICP also talks a lot about functional programming, and how to create simple functions which become powerful when combined.</p>
+
+<p>To understand the trade-offs that R has made compared to other programming languages, I found <a href="http://amzn.com/0262220695?tag=devtools-20"><em>Concepts, Techniques and Models of Computer Programming</em></a> by Peter van Roy and Sef Haridi extremely helpful. It helped me understand that R&#39;s copy-on-modify semantics make it substantially easier to reason about code, and that while its current implementation is not particularly efficient, it is a solvable problem.</p>
+
+<p>If you want to learn to be a better programmer, there&#39;s no place better to turn than <a href="http://amzn.com/020161622X?tag=devtools-20"><em>The Pragmatic Programmer</em></a> by Andrew Hunt and David Thomas. This book is language agnostic, and provides great advice for how to be a better programmer.</p>
+
+<h2>Getting help {#getting-help}</h2>
+
+<p>Currently, there are two main venues to get help when you&#39;re stuck and can&#39;t figure out what&#39;s causing the problem: <a href="http://stackoverflow.com">stackoverflow</a> and the R-help mailing list. You can get fantastic help in both venues, but they do have their own cultures and expectations. It&#39;s usually a good idea to spend a little time lurking, learning about community expectations, before you put up your first post. \index{help}</p>
+
+<p>Some good general advice:</p>
+
+<ul>
+<li><p>Make sure you have the latest version of R and of the package (or packages)
+you are having problems with. It may be that your problem is the result of
+a recently fixed bug.</p></li>
+<li><p>Spend some time creating a
+<a href="http://stackoverflow.com/questions/5963269">reproducible example</a>. This
+is often a useful process in its own right, because in the course of making
+the problem reproducible you often figure out what&#39;s causing the problem.</p></li>
+<li><p>Look for related problems before posting. If someone has already asked
+your question and it has been answered, it&#39;s much faster for everyone if you
+use the existing answer.</p></li>
+</ul>
+
+        </div>
+      </div>
+
+      <div class="footer">
+        <hr>
+        <p>&copy; Daniel Emaasit. Powered by <a href="http://jekyllrb.com/">jekyll</a>,
+          <a href="http://yihui.name/knitr/">knitr</a>, and
+          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>. Source
+          available on <a href="https://github.com/emaasit/getting-started-with-sparkr/">github</a>.
+        </p>
+      </div>
+
+    </div> <!-- /container -->
+
+  <script src="//code.jquery.com/jquery.js"></script>
+  <script src="www/bootstrap.min.js"></script>
+  <script src="www/toc.js"></script>
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-67989-17', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+  </body>
+</html>
