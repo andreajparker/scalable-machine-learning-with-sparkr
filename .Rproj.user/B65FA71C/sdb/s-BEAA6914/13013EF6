@@ -1,0 +1,17 @@
+{
+    "contents" : "---\nlayout: default\n---\n<div class=\"post\">\n\n  <header class=\"post-header\">\n    <h1 class=\"post-title\">{{ page.title }}</h1>\n  </header>\n\n  <article class=\"post-content\">\n    {{ content }}\n  </article>\n\n</div>\n",
+    "created" : 1436867647563.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "729576854",
+    "id" : "13013EF6",
+    "lastKnownWriteTime" : 1433942005,
+    "path" : "C:/Users/Emaasit/Dropbox/MyBooks/scalable-machine-learning/_layouts/page.html",
+    "project_path" : "_layouts/page.html",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "html"
+}
