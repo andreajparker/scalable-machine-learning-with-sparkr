@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "path" : "C:/Users/Emaasit/Dropbox/MyBooks/scalable-machine-learning/_layouts",
+=======
+    "path" : "C:/Users/Emaasit/Dropbox/MyBooks/scalable-machine-learning-with-sparkr",
+>>>>>>> master
     "sortOrder" : [
         {
             "ascending" : true,
