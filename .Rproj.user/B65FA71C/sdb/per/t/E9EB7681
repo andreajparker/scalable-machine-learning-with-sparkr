@@ -1,0 +1,17 @@
+{
+    "contents" : "---\nlayout: default\ntitle: Welcome\noutput: bookdown::html_chapter\n---\n\n# Scalable Machine Learning with SparkR\n\nMachine learning aims to extract knowledge from data and enables a wide range of applications. With datasets rapidly growing in size and complexity, learning techniques are fast becoming a core component of large-scale data processing pipelines. This book introduces the underlying statistical and algorithmic principles required to develop scalable real-world machine learning pipelines using SparkR.  SparkR, an R package initially developed at the AMPLab, provides an R frontend to Apache Spark and using Spark’s distributed computation engine allows us to run large scale data analysis from the R shell.\n\n<ul class=\"toc\">\n  {% include book-nav.html %}\n</ul>\n\n",
+    "created" : 1437036416496.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3523592279",
+    "id" : "E9EB7681",
+    "lastKnownWriteTime" : 1437036644,
+    "path" : "C:/Users/Emaasit/Dropbox/MyBooks/scalable-machine-learning-with-sparkr/index.rmd",
+    "project_path" : "index.rmd",
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
