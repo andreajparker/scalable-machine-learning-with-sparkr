@@ -23,39 +23,39 @@
               Table of contents <b class="caret"></b>
             </a>
             <ul class="dropdown-menu pull-right" role="menu">
-              <li><a href="Introduction.html">Introduction</a></li>
+              <li><a href="index.html">Introduction</a></li>
 
 <li class="dropdown-header">The R Project</li>
-<li><a href="What-is-r.html">What is R?</a></li>
-<li><a href="Quick-start.html">Quick Start</a></li>
-<li><a href="Data-Structures.html">Data Structures</a></li>
-<li><a href="A-quick-example.html">A Quick Example</a></li>
-<li><a href="Visualization-in-r.html">Visualization in R</a></li>
-<li><a href="Additional-resources.html">Additional Resources</a></li>
-<li><a href="summary-1.html">Summary</a></li>
+<li><a href="index.html">What is R?</a></li>
+<li><a href="index.html">Quick Start</a></li>
+<li><a href="index.html">Data Structures</a></li>
+<li><a href="index.html">A Quick Example</a></li>
+<li><a href="index.html">Visualization in R</a></li>
+<li><a href="index.html">Additional Resources</a></li>
+<li><a href="index.html">Summary</a></li>
 
 
 <li class="dropdown-header">Apache Spark</li>
-<li><a href="Functional-programming.html">What is Apache Spark</a></li>
-<li><a href="Downloading-and-installing-spark.html">Downloading and Installing Spark</a></li>
-<li><a href="Resilient-distributed-datasets.html">Resilient Distributed Datasets</a></li>
-<li><a href="Loading-and-saving-data.html">Loading and Saving Data</a></li>
-<li><a href="Sparksql.html">SparkSQL</a></li>
-<li><a href="Spark-streaming.html">Spark Streaming</a></li>
-<li><a href="Machine-learning-with-mllib.html">Machine Learning with MLib</a></li>
-<li><a href="summary-2.html">Summary</a></li>
+<li><a href="index.html">What is Apache Spark?</a></li>
+<li><a href="index.html">Downloading and Installing Spark</a></li>
+<li><a href="index.html">Resilient Distributed Datasets</a></li>
+<li><a href="index.html">Loading and Saving Data</a></li>
+<li><a href="index.html">SparkSQL</a></li>
+<li><a href="index.html">Spark Streaming</a></li>
+<li><a href="index.html">Machine Learning with MLib</a></li>
+<li><a href="index.html">Summary</a></li>
 
 
 <li class="dropdown-header">SparkR</li>
-<li><a href="Overview.html">Overview</a></li>
-<li><a href="Spark-r-dataframes.html">SparkR DataFrames</a></li>
-<li><a href="Creating-dataframes.html">Creating DataFrames</a></li>
-<li><a href="Dataframe-operations.html">DataFrame Operations</a></li>
-<li><a href="sql-queries.html">SQL Queries</a></li>
-<li><a href="visualization.html">Visualization</a></li>
-<li><a href="statistical-modeling.html">Statistical Modeling</a></li>
-<li><a href="machine-learning.html">Machine Learning</a></li>
-<li><a href="summary-3.html">Summary</a></li>
+<li><a href="index.html">Overview</a></li>
+<li><a href="index.html">SparkR DataFrames</a></li>
+<li><a href="index.html">Creating DataFrames</a></li>
+<li><a href="index.html">DataFrame Operations</a></li>
+<li><a href="index.html">SQL Queries</a></li>
+<li><a href="index.html">Visualization</a></li>
+<li><a href="index.html">Statistical Modeling</a></li>
+<li><a href="index.html">Machine Learning</a></li>
+<li><a href="index.html">Summary</a></li>
 
 
 
@@ -73,14 +73,15 @@
 
 
         <div class="well">
-          This is an online book developed in the open. The material has not been published yet. You can contribute by clicking <a href="/contribute.html">here</a>.
+          This is an online book developed in the open. The material has not been published yet. You can contribute by clicking <a href="/scalable-machine-learning-with-sparkr/contribute.html">here</a>.
         </div>
 
         <div class="well">
+          <p>Contact Me:</p>
           <ul class="social-media-list">
           
           <li>
-            <a href="https://github.com/emaasit">
+            <a href="https://github.com/emaasit" target="_blank">
               <span class="icon  icon--github">
                 <svg width="16" height="16" viewBox="0 0 16 16">
                   <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"></path>
@@ -94,7 +95,7 @@
 
           
           <li>
-            <a href="https://twitter.com/emaasit">
+            <a href="https://twitter.com/emaasit" target="_blank">
               <span class="icon  icon--twitter">
                 <svg width="16" height="16" viewBox="0 0 16 16">
                   <path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809
@@ -106,7 +107,7 @@
             </a>
           </li>
 
-          <li><a href="mailto:daniel.emaasit@gmail.com">daniel.emaasit@gmail.com</a></li>
+
           
         </ul>
         </div>
@@ -116,9 +117,9 @@
           <ul class="list-unstyled" id="toc"></ul>
 
           <hr>
-          <p><a href="/contribute.html">How to contribute</a></p>
+          <p><a href="/scalable-machine-learning-with-sparkr/contribute.html">How to contribute</a></p>
 
-          <p><a class="btn btn-primary" href="https://github.com/emaasit/getting-started-with-sparkr/edit/master/Overview.rmd">Edit this page</a></p>
+          <p><a class="btn btn-primary" href="https://github.com/emaasit/scalable-machine-learning-with-sparkr/edit/master/Overview.rmd">Edit this page</a></p>
         </div>
 
         <div id="content" class="col-xs-12 col-sm-8 pull-right">
@@ -183,10 +184,10 @@ Some good general advice:
 
       <div class="footer">
         <hr>
-        <p>&copy; Daniel Emaasit. Powered by <a href="http://jekyllrb.com/">jekyll</a>,
-          <a href="http://yihui.name/knitr/">knitr</a>, and
-          <a href="http://johnmacfarlane.net/pandoc/">pandoc</a>. Source
-          available on <a href="https://github.com/emaasit/getting-started-with-sparkr/">github</a>.
+        <p>&copy; Daniel Emaasit 2015. Powered by <a href="http://jekyllrb.com/" target="_blank">jekyll</a>,
+          <a href="http://yihui.name/knitr/" target="_blank">knitr</a>, and
+          <a href="http://johnmacfarlane.net/pandoc/" target="_blank">pandoc</a>. Source
+          available on <a href="https://github.com/emaasit/scalable-machine-learning-with-sparkr/" target="_blank">github</a>.
         </p>
       </div>
 
